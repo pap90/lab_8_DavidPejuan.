@@ -103,8 +103,16 @@ public class administrarbarra extends Thread {
                     double x1=parada2.getCoorx();
                     double y1=parada2.getCoory();
                     double d=Math.sqrt((Math.pow((x2-x1), 2))+Math.pow(y2-y1, 2));
-                    
+                    p.add(d);
                 }
+                Double min=Collections.min(p);
+                int posi=0;
+                for (int i = 0; i < p.size(); i++) {
+                    if (p.get(i)==min) {
+                        posi=i;
+                    }
+                }
+                parada2=((estudiante) bus.getEstu().get(posi)).getParada();
                 i2++;
                 
             }
