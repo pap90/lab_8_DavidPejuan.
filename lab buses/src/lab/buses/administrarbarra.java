@@ -74,6 +74,8 @@ public class administrarbarra extends Thread {
     public void run() {
         parada parada1 = null;
         parada parada2 = null;
+        int i2=1;
+        
         while (vive) {
             if (parada2 == null) {
                 ArrayList<Double> p = new ArrayList();
@@ -95,9 +97,13 @@ public class administrarbarra extends Thread {
                 barra.setMaximum((int) t2);
             }else if (barra.getValue()==0) {
                 ArrayList<Double> p=new ArrayList();
-                for (int i = 0; i < 10; i++) {
+                for (int i = i2; i < bus.getEstu().size(); i++) {
+                    double x=((((estudiante) bus.getEstu().get(i)).getParada().getCoorx()));
+                    double y=((((estudiante) bus.getEstu().get(i)).getParada().getCoorx()));
                     
                 }
+                i2++;
+                
             }
                 
             
