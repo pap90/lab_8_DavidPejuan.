@@ -15,19 +15,21 @@ import java.util.ArrayList;
 public class buses {
     private int id;
     private String placa;
-    private Color color;
+    private String color;
     private double velocidad;
     private ArrayList<estudiante> estu=new ArrayList();
 
     public buses() {
     }
 
-    public buses(int id, String placa, Color color, double velocidad) {
+    public buses(int id, String placa, String color, double velocidad) {
         this.id = id;
         this.placa = placa;
         this.color = color;
         this.velocidad = velocidad;
     }
+
+    
 
     public int getId() {
         return id;
@@ -45,14 +47,15 @@ public class buses {
         this.placa = placa;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
+    
     public double getVelocidad() {
         return velocidad;
     }
