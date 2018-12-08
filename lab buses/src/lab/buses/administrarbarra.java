@@ -98,8 +98,11 @@ public class administrarbarra extends Thread {
             }else if (barra.getValue()==0) {
                 ArrayList<Double> p=new ArrayList();
                 for (int i = i2; i < bus.getEstu().size(); i++) {
-                    double x=((((estudiante) bus.getEstu().get(i)).getParada().getCoorx()));
-                    double y=((((estudiante) bus.getEstu().get(i)).getParada().getCoorx()));
+                    double x2=((((estudiante) bus.getEstu().get(i)).getParada().getCoorx()));
+                    double y2=((((estudiante) bus.getEstu().get(i)).getParada().getCoory()));
+                    double x1=parada2.getCoorx();
+                    double y1=parada2.getCoory();
+                    double d=Math.sqrt((Math.pow((x2-x1), 2))+Math.pow(y2-y1, 2));
                     
                 }
                 i2++;
